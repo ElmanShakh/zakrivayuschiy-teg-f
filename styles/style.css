@@ -191,7 +191,7 @@
   filter: hue-rotate(90deg);
 }
 
-.sprint-image-multiple {
+.filter-multiple {
   filter: contrast(75%) hue-rotate(90deg) opacity(0.4) brightness(200%) blur(97%);
 } 
 

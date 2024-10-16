@@ -180,7 +180,7 @@
 }
 
 .sprint-2-final-image {
-  filter: contrast(75%) hue-rotate(90deg) opacity(0.4) brightness(200%) blur(97%);
+  filter: hue-rotate(53deg);
 }
 
 .sprint-3-start-image {
@@ -191,8 +191,8 @@
   filter: hue-rotate(90deg);
 }
 
-.sprint-now-image {
-  filter: hue-rotate(53deg);
+.sprint-image-multiple {
+  filter: contrast(75%) hue-rotate(90deg) opacity(0.4) brightness(200%) blur(97%);
 } 
 
 .article__description {

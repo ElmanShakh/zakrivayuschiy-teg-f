@@ -153,6 +153,7 @@
     1px 0 var(--bg-color), 
     0 -1px var(--bg-color);
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 .article__image {
@@ -192,7 +193,7 @@
 }
 
 .filter-multiple {
-  filter: contrast(75%) hue-rotate(90deg) opacity(0.4) brightness(200%) blur(97%);
+  filter: contrast(75%) hue-rotate(90deg) opacity(0.4) brightness(50%);
 } 
 
 .article__description {

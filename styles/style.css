@@ -20,6 +20,7 @@
   font-family: var(--main-text-font, sans-serif);
   background: var(--bg-light-color) no-repeat fixed center / cover;
   background-image: var(--bg-image);
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--main-font-weight);
@@ -37,12 +38,12 @@
   margin-bottom: 102px;
   margin-block-start: 100px;
   border: 2px solid var(--accent-text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   background-color: var(--bg-color);
 }
 
 .header__title {
-  margin-top: 120px;
+  margin-top: clamp(7.5rem, 7.1259rem + 1.5962vw, 8.5625rem); /*Для 375 120px */
   margin-bottom: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
@@ -70,6 +71,7 @@
   font-size: 14px;
   text-transform: uppercase;
   background: none;
+  transition: opacity 0.3s ease;
 }
 
 /*Анимация кнопок меню*/
@@ -127,7 +129,7 @@
 
 .article__header {
   padding: 4px 10px;
-  font-family: var(--main-text-font);
+  font-family: var(--main-text-font, sans-serif);
   font-size: 18px;
   background-color: var(--bg-color);
   font-variation-settings: 'wght' var(--header-font-weight);
@@ -137,15 +139,17 @@
 
 .article__image-box {
   position: relative;
+  border: 2px solid var(--contour-color);
 }
 
 .article__image-lable {
   position: absolute;
   top: 25px;
   right: 11px;
+  z-index: 1;
   opacity: 50%;
   color: var(--accent-text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   text-shadow:
     -1px 0 var(--bg-color), 
@@ -153,10 +157,10 @@
     1px 0 var(--bg-color), 
     0 -1px var(--bg-color);
   mix-blend-mode: hard-light;
-  z-index: 1;
 }
 
 .article__image {
+  display: block;
   width: 100%;
   min-height: 371px;
   object-fit: cover;
@@ -164,32 +168,32 @@
 }
 
 
-.sprint-0-image {
+.filter-contrast {
   filter: contrast(250%);
 }
 
-.sprint-1-start-image {
+.filter-invert {
   filter: invert(0.30);
 }
 
-.sprint-1-final-image {
+.filter-sepia {
   filter: sepia(1);
 }
 
-.sprint-2-start-image {
+.filter-blur {
   filter: blur(4px);
 }
 
-.sprint-2-final-image {
+.filter-hue-rotate {
   filter: hue-rotate(53deg);
 }
 
-.sprint-3-start-image {
+.filter-saturate {
   filter: saturate(4);
 }
 
-.sprint-3-final-image {
-  filter: hue-rotate(90deg);
+.filter-brightness {
+  filter: brightness(90%);
 }
 
 .filter-multiple {
@@ -199,11 +203,11 @@
 .article__description {
   display: grid;
   gap: 27px;
-  padding: 25px 25px 18px;
+  padding: clamp(1.5625rem, 1.4085rem + 0.6573vw, 2rem) 25px 25px;
 }
 
 .article__description-text {
-  font-family: var(--main-text-font);
+  font-family: var(--main-text-font, sans-serif);
   font-size: 18px;
   line-height: 21px;
   text-align: left;
@@ -216,8 +220,12 @@
 }
 
 .card__icon-button {
+  display: grid;
+  justify-self: center;
+  align-items: center;
   border: none;
   background-color: var(--bg-color);
+  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -226,13 +234,13 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-text-color);
-  transition: 0.3s ease;
 }
 
 .card__like-button {
   width: 130px;
   height: 38px;
   font-size: 14px;
+  text-transform: capitalize;
 }
 
 /*Анимация кнопок*/
@@ -240,8 +248,12 @@
 .page__button {
   position: relative;
   border: 2px solid var(--contour-color);
-  text-transform: capitalize;
   background-color: var(--bg-color);
+  transition: 0.3s ease;
+}
+
+.page__button:hover {
+  cursor: pointer;
 }
 
 .page__button:focus {
@@ -250,7 +262,6 @@
 
 .page__button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-text-color);
-  transition: 0.3s ease;
 }
 
 .page__button::before {
@@ -274,7 +285,7 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   mix-blend-mode: difference;
 }
@@ -299,7 +310,7 @@
   gap: 8px;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   height: 84px;
-  margin: 54px auto 102px;
+  margin: 0 auto 102px;
   border: 2px solid var(--contour-color);
   cursor: pointer;
 }
@@ -327,8 +338,7 @@
   border: 2px solid var(--contour-color);
   padding: 30px 40px;
   background-color: var(--bg-color);
-  max-inline-size: 341px;
-  block-size: 191px;
+  max-inline-size: clamp(21.3125rem, 21.0044rem + 1.3146vw, 22.1875rem);
 }
 
 dialog[open] {
@@ -355,7 +365,7 @@ dialog[open] {
 
 .dialog__header {
   color: var(--accent-text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   line-height: 21px;
   text-align: left;

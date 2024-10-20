@@ -65,15 +65,15 @@
             <span class="article__image-lable">&lt;/HTML&gt;</span>
             <img
               src="/images/Page_Images/1img.png"
-              class="article__image sprint-0-image"
+              class="article__image filter-contrast"
               alt="Фургон"
             />
           </div>
           <div class="article__description">
             <p class="article__description-text">
               Это было самое начало пути. На этом этапе важно было проникнуться
-              основами и настроиться на учёбу. И, <br />возможно, подумать, как
-              новые знания могут повлиять на ваше будущее.
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.
             </p>
             <p class="article__description-text">
               Нужно было настроиться и решить для себя как выстроить обучение и
@@ -87,6 +87,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -125,7 +126,7 @@
             <span class="article__image-lable">&lt;/HTML&gt;</span>
             <img
               src="/images/Page_Images/2img.png"
-              class="article__image sprint-1-start-image"
+              class="article__image filter-invert"
               alt="Фургон"
             />
           </div>
@@ -138,8 +139,7 @@
               начать? а вдруг будет слишком сложно? что, если я не справлюсь?
             </p>
             <p class="article__description-text">
-              Нетерпелось начать обучение и конечно же начать писать код для
-              проекта!
+              Нетерпелось начать обучение и конечно же начать
             </p>
             <div class="article__button">
               <button class="card__icon-button" type="button">
@@ -149,6 +149,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -187,7 +188,7 @@
             <span class="article__image-lable">&lt;/CSS&gt;</span>
             <img
               src="/images/Page_Images/3img.png"
-              class="article__image sprint-1-final-image"
+              class="article__image filter-sepia"
               alt="Фургон"
             />
           </div>
@@ -209,6 +210,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -247,7 +249,7 @@
             <span class="article__image-lable">&lt;/desigions&gt;</span>
             <img
               src="/images/Page_Images/4img.png"
-              class="article__image sprint-2-start-image"
+              class="article__image filter-blur"
               alt="Фургон"
             />
           </div>
@@ -271,6 +273,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -309,7 +312,7 @@
             <span class="article__image-lable">&lt;/care&gt;</span>
             <img
               src="/images/Page_Images/5img.png"
-              class="article__image sprint-2-final-image"
+              class="article__image filter-hue-rotate"
               alt="Фургон"
             />
           </div>
@@ -335,6 +338,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -373,7 +377,7 @@
             <span class="article__image-lable">&lt;/support&gt;</span>
             <img
               src="/images/Page_Images/6img.png"
-              class="article__image sprint-3-start-image"
+              class="article__image filter-saturate"
               alt="Фургон"
             />
           </div>
@@ -396,6 +400,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -436,7 +441,7 @@
             >
             <img
               src="/images/Page_Images/7img.png"
-              class="article__image sprint-3-final-image"
+              class="article__image filter-brightness"
               alt="Фургон"
             />
           </div>
@@ -462,6 +467,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -524,6 +530,7 @@
                   height="36"
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -555,21 +562,23 @@
             </div>
           </div>
         </article>
+
+        <footer class="footer">
+          <button
+            class="footer__button page__button"
+            type="button"
+            onclick="window['dialog-id'].showModal()"
+            aria-controls="dialog-id"
+          >
+            <svg viewBox="0 0 39 39" class="footer__button-image">
+              <use href="/svg/floppy.svg#floppy" />
+            </svg>
+            <span class="button__text">Сохранить на память</span>
+          </button>
+        </footer>
       </main>
     </div>
-    <footer class="footer">
-      <button
-        class="footer__button page__button"
-        type="button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
-      >
-        <svg viewBox="0 0 39 39" class="footer__button-image">
-          <use href="/svg/floppy.svg#floppy" />
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
+
     <dialog class="dialog" id="dialog-id">
       <div class="dialog__descrtiption">
         <svg viewBox="0 0 39 39" class="dialog__image">
@@ -580,7 +589,7 @@
       <button
         type="button"
         onclick="window['dialog-id'].close()"
-        class="dialog__button"
+        class="dialog__button page__button"
       >
         <span class="button__text">ok</span>
       </button>
